@@ -3,9 +3,47 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Traditional Tables</title>
+    <title>Spice It Up</title>
 </head>
 <body>
     <h1>Coming Soon</h1>
+
+<body class="flex-column min-100-vh">
+  <header class="hero">
+    <h1 class="app-title">Spice It Up!</h1>
+    <p>Try a New Recipe!</p>
+  </header>
+
+
+  <main class="container">
+    <div>
+
+      <div class="card">
+        <h3 class="card-header text-uppercase">Search By Country of Origin/Culture</h3>
+        <form id="user-form" class="card-body">
+          <label class="form-label" for="keywords">Keywords</label>
+          <input name="keywords" id="keywords"/>
+          <button type="submit" class="btn">Search Now!</button>
+        </form>
+      </div>
+
+      <div class="card">
+        <h3 class="card-header text-uppercase">Search By Dietary Restrictions: Coming Soon!</h3>
+        <div id="language-buttons" class="card-body">
+
+            <!-- not sure if we want this part to be a dropdown or even part of the MVP version -->
+          <!-- <button data-language="javascript" class="btn"></button>
+          <button data-language="html" class="btn">HTML</button>
+          <button data-language="css" class="btn">CSS</button> -->
+        </div>
+      </div>
+    </div>
+
+    <div>
+      <h2 class="subtitle">Potential Recipes for: <span id="search-terms"></span></h2>
+      <div id="recipes-container" class="list-group"></div>
+    </div>
+  </main>
+
 </body>
 </html>
