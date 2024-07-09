@@ -23,6 +23,7 @@ function getRecipe(event) {
             recipeTitle.textContent = data.recipes[0].title;
             const recipeLink = document.createElement('a');
             recipeLink.textContent = data.recipes[0].sourceUrl;
+            recipeLink.classList = "button is-info"
             recipeLink.href = data.recipes[0].sourceUrl;
 
             displayEl.appendChild(recipeCard);
@@ -30,9 +31,6 @@ function getRecipe(event) {
             recipeCard.appendChild(recipeImg)
             recipeCard.appendChild(recipeLink)
         })
-
 }
-
-
 
 searchButton.addEventListener('click', getRecipe);
