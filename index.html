@@ -12,9 +12,44 @@
   <title>Home</title>
   </head>
 <body>
-<a href="about.html"> about </a>
-<a href="feat.html"> holiday features </a>
-<a href="random.html"> random recipe </a>
-<a href="search.html"> recipe search </a>
+
+<nav class="navbar" role="navigation" aria-label="main navigation" style="background-color: beige; color: #A13A34;">
+  <div class="navbar-brand">
+    <a class="navbar-item" href="index.html">Spice It Up
+    </a>
+    <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+    </a>
+  </div>
+  <div id="navbarBasicExample" class="navbar-menu">
+    <div class="navbar-start">
+      <a class="navbar-item" href="about.html">
+        Home
+      </a>
+
+      <a class="navbar-item" href="feat.html">
+        Featured Recipe
+      </a>
+      <a class="navbar-item" href="random.html">
+        Random Recipe
+      </a>
+      <a class="navbar-item" href="search.html">
+        Search Recipes
+      </a>
+    <div class="navbar-end">
+        
+      </nav>
+  <div class="container">
+  <div class="fixed-grid has-auto-count">
+    <div class="grid">
+      <div class="cell"><a href="random.html">Random Recipe</a></div>
+      <div class="cell"><a href="feat.html">Holiday Features</a></div>
+      <div class="cell"><a href="search.html">Search by Keyword</a></div>
+    </div>
+  </div>
+  </div>
 </body>
 </html>
