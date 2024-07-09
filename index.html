@@ -8,47 +8,54 @@
       integrity="sha256-iu/zLUB+QgISXBLCW/mcDi/rnf4m4uEDO0wauy76x7U="
       crossorigin="anonymous"
     ></script>
-    <title>Spice It Up</title>
-</head>
-<body>
-    <h1>Coming Soon</h1>
-    <button onclick="getHolidaysForNextWeek()">Get Holidays</button>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="app.js"></script>
-  <header>
-    <h1 class="app-title">Spice It Up!</h1>
-    <p>Try a New Recipe!</p>
-  </header>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
+</head>
+<body>
 
-
+  <header class="has-text-centered">
+    <h1 class="title">Spice It Up!</h1>
+    <button onclick="getHolidaysForNextWeek()">Get Holidays</button>
+    
   <main class="container">
-    <div>
-
-      <div class="card">
-        <h3 class="card-header text-uppercase">Search By Country of Origin/Culture</h3>
-        <form id="user-form" class="card-body">
-          <label class="form-label" for="keywords">Keywords</label>
-          <input name="keywords" id="keywords"/>
-          <button type="submit" class="btn">Search Now!</button>
-        </form>
-      </div>
-
-      <div class="card">
-        <h3 class="card-header text-uppercase">Search By Dietary Restrictions: Coming Soon!</h3>
-        <div id="language-buttons" class="card-body">
-
-            <!-- not sure if we want this part to be a dropdown or even part of the MVP version -->
-          <!-- <button data-language="javascript" class="btn"></button>
-          <button data-language="html" class="btn">HTML</button>
-          <button data-language="css" class="btn">CSS</button> -->
+    <form class="box">
+      <h1 class="title">Search Recipes</h1>
+      <div class="field">
+        <label class="label">Keywords</label>
+        <div class="control">
+            <input class="input" type="text" placeholder="Search">
         </div>
       </div>
+      <div class="field">
+        <label class="label">Cuisine</label>
+        <div class="control">
+            <div class="select">
+                <select>
+                    <option>Select cuisine</option>
+                    <option>Italian</option>
+                    <option>Mexican</option>
+                    <option>Indian</option>
+                    <option>Chinese</option>
+                    <option>American</option>
+                </select>
+            </div>
+        </div>
     </div>
-
-    <div>
-      <h2 class="subtitle">Potential Recipes for: <span id="search-terms"></span></h2>
-      <div id="recipes-container" class="list-group"></div>
+    <!-- adding intolerances and diets fields later, just the mvp form for now -->
+    <div class="field is-grouped">
+      <div class="control">
+        <button class="button is-link">Search</button>
+      </div>
+      <div class="control">
+        <button class="button is-link is-light">Cancel</button>
+      </div>
     </div>
   </main>
+
+  <footer class="footer">
+    <h1 class="has-text-centered">Temporary Footer</h1>
+  </footer>
+
 </body>
 </html>
