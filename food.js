@@ -31,9 +31,6 @@ function getRecipe(event) {
             recipeCard.appendChild(recipeImg)
             recipeCard.appendChild(recipeLink)
         })
-
 }
-
-
 
 searchButton.addEventListener('click', getRecipe);

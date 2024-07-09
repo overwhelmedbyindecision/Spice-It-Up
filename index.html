@@ -3,47 +3,53 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Spice It Up</title>
-</head>
+    <script
+      src="https://cdn.jsdelivr.net/npm/dayjs@1.11.3/dayjs.min.js"
+      integrity="sha256-iu/zLUB+QgISXBLCW/mcDi/rnf4m4uEDO0wauy76x7U="
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
+  <title>Home</title>
+  </head>
 <body>
-    <h1>Coming Soon</h1>
 
-<body>
-  <header>
-    <h1 class="app-title">Spice It Up!</h1>
-    <p>Try a New Recipe!</p>
-  </header>
+<nav class="navbar" role="navigation" aria-label="main navigation" style="background-color: beige; color: #A13A34;">
+  <div class="navbar-brand">
+    <a class="navbar-item" href="index.html">Spice It Up
+    </a>
+    <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+    </a>
+  </div>
+  <div id="navbarBasicExample" class="navbar-menu">
+    <div class="navbar-start">
+      <a class="navbar-item" href="about.html">
+        Home
+      </a>
 
-
-  <main class="container">
-    <div>
-
-      <div class="card">
-        <h3 class="card-header text-uppercase">Search By Country of Origin/Culture</h3>
-        <form id="user-form" class="card-body">
-          <label class="form-label" for="keywords">Keywords</label>
-          <input name="keywords" id="keywords"/>
-          <button class="btn" id="search-button">Search Now!</button>
-        </form>
-      </div>
-
-      <div class="card">
-        <h3 class="card-header text-uppercase">Search By Dietary Restrictions: Coming Soon!</h3>
-        <div id="language-buttons" class="card-body">
-
-            <!-- not sure if we want this part to be a dropdown or even part of the MVP version -->
-          <!-- <button data-language="javascript" class="btn"></button>
-          <button data-language="html" class="btn">HTML</button>
-          <button data-language="css" class="btn">CSS</button> -->
-        </div>
-      </div>
+      <a class="navbar-item" href="feat.html">
+        Featured Recipe
+      </a>
+      <a class="navbar-item" href="random.html">
+        Random Recipe
+      </a>
+      <a class="navbar-item" href="search.html">
+        Search Recipes
+      </a>
+    <div class="navbar-end">
+        
+      </nav>
+  <div class="container">
+  <div class="fixed-grid has-auto-count">
+    <div class="grid">
+      <div class="cell"><a href="random.html">Random Recipe</a></div>
+      <div class="cell"><a href="feat.html">Holiday Features</a></div>
+      <div class="cell"><a href="search.html">Search by Keyword</a></div>
     </div>
-
-    <div>
-      <h2 class="subtitle">Potential Recipes for: <span id="search-terms"></span></h2>
-      <div id="recipes-container" class="list-group"></div>
-    </div>
-  </main>
-<script src="assets/script.js"></script>
+  </div>
+  </div>
 </body>
 </html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script
+      src="https://cdn.jsdelivr.net/npm/dayjs@1.11.3/dayjs.min.js"
+      integrity="sha256-iu/zLUB+QgISXBLCW/mcDi/rnf4m4uEDO0wauy76x7U="
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
+    <link rel="stylesheet" href="./assets/calendar.css">
+    <title>Featured Recipes</title>
+</head>
+<body>
+
+    <header class="has-text-centered">
+        <h1 class="title">Feature Recipes</h1>
+        
+          <select name="q" id="country">
+              <option value="">Select a country you are interested in</option>
+              <option value="US">United States</option>
+              <option value="CN">China</option>
+              <option value="JP">Japan</option>
+              <option value="IN">India</option>
+              <option value="KR">Korea</option>
+              <option value="FR">France</option>
+              <option value="GR">Greece</option>
+              <option value="DE">Germany</option>
+              <option value="MX">Mexico</option>
+              <option value="BS">Bahamas</option>
+              <option value="CU">Cuba</option>
+          </select><br>
+         <button onclick="getHolidaysForNextWeek()">Get Holidays</button>
+        
+        <h2>Upcoming Holidays</h2>
+        <div id="calendar"></div>
+        <script src="./assets/holiday.js"></script>
+</body>
