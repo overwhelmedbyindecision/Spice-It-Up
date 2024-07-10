@@ -1,11 +1,16 @@
 const apiKey = 'lGbpFvBDHMya0SxraF514q9D9Za18ZWq';
 const country = document.getElementById("country");
-
-
 const year = 2024;
 const today = dayjs();
 
+
 const getHolidaysForNextWeek=function(){
+    const displayEl = document.getElementById('displayEl');
+    if (displayEl) {
+        displayEl.innerHTML = "";
+    }
+
+
     const existingHolidayList = document.querySelector(".holiday-list");
     if (existingHolidayList) {
         existingHolidayList.remove();
