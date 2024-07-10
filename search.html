@@ -11,39 +11,35 @@
     <!-- <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> -->
     <script src="app.js"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
+    <link rel="stylesheet" href="assets/style.css">
     <title>Recipe Search</title>
 </head>
 <body>
-  <nav class="navbar" role="navigation" aria-label="main navigation" style="background-color: beige; color: #A13A34;">
-    <div class="navbar-brand">
-      <a class="navbar-item" href="index.html">Spice It Up
-      </a>
-      <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
-        <span aria-hidden="true"></span>
-        <span aria-hidden="true"></span>
-        <span aria-hidden="true"></span>
-        <span aria-hidden="true"></span>
-      </a>
-    </div>
-    <div id="navbarBasicExample" class="navbar-menu">
-      <div class="navbar-start">
-        <a class="navbar-item" href="about.html">
-          Home
-        </a>
-        <a class="navbar-item" href="feat.html">
-          Featured Recipe
-        </a>
-        <a class="navbar-item" href="random.html">
-          Random Recipe
-        </a>
-        <a class="navbar-item" href="search.html">
-          Search Recipes
-        </a>
-      </div>
-      <div class="navbar-end"></div>
-   </nav>
+  <header>
+    <nav class="navbar" role="navigation" aria-label="main navigation" id="navbar">
+        <div class="navbar-brand">
+          <img src="assets/images/SIU logo BandW.png" id="bullet-logo">
+        </div>
+      <div id="navbarBasicExample" class="navbar-menu">
+        <div class="navbar-end">
+          <a href="index.html" class="navbar-item">
+            Home
+          </a>
+          <a href="feat.html" class="navbar-item">
+            Featured Recipes
+          </a>
+          <a href="random.html" class="navbar-item">
+            Random Recipe
+          </a>
+          <a href="about.html" class="navbar-item">
+            About Us
+          </a>
+          </a>
+        </div>
+        </div>
+    </nav>
   </header>
-  <main class="has-text-centered">
+    <main class="has-text-centered">
       <button class="js-modal-trigger button-is-primary" data-target="modal">
         Open Searchform
       </button>

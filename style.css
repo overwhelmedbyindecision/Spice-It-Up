@@ -1,3 +1,31 @@
+
 #bullet-logo {
     height: 5vw;
 }
+
+.food-image {
+    border-radius: 25px;
+    border-style: solid;
+    border: 10px maroon;
+}
+
+#navbar {
+    background-color: maroon;
+    margin-bottom: 3vw maroon;
+}
+
+#search-button {
+    margin: maroon;
+}
+
+.navbar-item{
+    font-weight: bolder;
+    color: wheat;
+}
+
+.card {
+    background-color: wheat;
+    border-color: maroon;
+    border-width: 20px;
+}
+
