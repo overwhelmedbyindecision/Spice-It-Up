@@ -3,12 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script
+    <!-- <script
       src="https://cdn.jsdelivr.net/npm/dayjs@1.11.3/dayjs.min.js"
       integrity="sha256-iu/zLUB+QgISXBLCW/mcDi/rnf4m4uEDO0wauy76x7U="
       crossorigin="anonymous"
-    ></script>
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    ></script> -->
+    <!-- <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> -->
     <script src="app.js"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
     <link rel="stylesheet" href="assets/style.css">
@@ -39,42 +39,57 @@
         </div>
     </nav>
   </header>
-    <main class="container">
-        <form class="box">
-          <h1 class="title">Search Recipes</h1>
-          <div class="field">
-            <label class="label">Keywords</label>
-            <div class="control">
-                <input class="input" type="text" placeholder="Search">
-            </div>
-          </div>
-          <div class="field">
-            <label class="label">Cuisine</label>
-            <div class="control">
-                <div class="select">
-                    <select>
+    <main class="has-text-centered">
+      <button class="js-modal-trigger button-is-primary" data-target="modal">
+        Open Searchform
+      </button>
+      <div id="modal" class="modal" >
+        <div class="modal-background"></div>
+        <div class="modal-content">
+          <div class="box">
+            <form class="box">
+              <h1 class="title">Search Recipes</h1>
+                <div class="field">
+                <label for="searchterm" class="label">Keywords</label>
+                  <div class="control">
+                    <input id="searchterm" class="input" type="text" placeholder="Search">
+                  </div>
+                </div>
+                <div class="field">
+                  <label class="label">Cuisine</label>
+                  <div class="control">
+                    <div class="select">
+                      <select>
                         <option>Select cuisine</option>
                         <option>Italian</option>
                         <option>Mexican</option>
                         <option>Indian</option>
                         <option>Chinese</option>
                         <option>American</option>
-                    </select>
+                      </select>
+                     </div>
+                  </div>
                 </div>
-            </div>
-        </div>
-        <!-- adding intolerances and diets fields later, just the mvp form for now -->
-        <div class="field is-grouped">
-          <div class="control">
-            <button class="button is-link">Search</button>
-          </div>
-          <div class="control">
-            <button class="button is-link is-light">Cancel</button>
+                <div class="field is-grouped">
+                  <div class="control">
+                    <button class="button is-link">Search</button>
+                  </div>
+                </div>
+            </form>
           </div>
         </div>
-      </main>
+
+        <button class="modal-close is-large" aria-label="close"></button>
+      </div>
     
+    <section>
+
+    </section>
+  </main>
       <footer class="footer">
         <h1 class="has-text-centered">Temporary Footer</h1>
       </footer>
+
+  <script src="assets/search.js">
+  </script>
 </body>
