@@ -1,51 +1,70 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script
-      src="https://cdn.jsdelivr.net/npm/dayjs@1.11.3/dayjs.min.js"
-      integrity="sha256-iu/zLUB+QgISXBLCW/mcDi/rnf4m4uEDO0wauy76x7U="
-      crossorigin="anonymous"
-    ></script>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
-    <link rel="stylesheet" href="assets/style.css">
-  <title>Home</title>
-  </head>
-<body>
 
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdn.jsdelivr.net/npm/dayjs@1.11.3/dayjs.min.js"
+    integrity="sha256-iu/zLUB+QgISXBLCW/mcDi/rnf4m4uEDO0wauy76x7U=" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
+  <link rel="stylesheet" href="assets/style.css">
+  <title>Home</title>
+</head>
+
+<body>
   <header>
     <nav class="navbar" role="navigation" aria-label="main navigation" id="navbar">
-        <div class="navbar-brand">
-          <img src="assets/images/SIU logo BandW.png" id="bullet-logo">
+      <div class="navbar-brand">
+        <img src="assets/images/SIU logo BandW.png" id="bullet-logo">
+        <a href="feat.html" class="navbar-item">
+          Featured Recipes
+        </a>
+        <a href="search.html" class="navbar-item">
+          Recipe Search
+        </a>
+        <a href="random.html" class="navbar-item">
+          Random Recipe
+        </a>
+        <a href="about.html" class="navbar-item">
+          About Us
+        </a>
+        <!-- <a class="navbar-burger" role="button" aria-label="menu" aria-expanded="false">
+          <span aria-hidden="true">Featured Recipes</span>
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+        </a> -->
+      </div>
+      <div id="navbarBasicExample" class="navbar-menu is-active">
+      <div class="navbar-start"></div>
+    
+          <div class="navbar-end"></div>
         </div>
-      <div id="navbarBasicExample" class="navbar-menu">
-        <div class="navbar-end">
-          <a href="feat.html" class="navbar-item">
-            Featured Recipes
-          </a>
-          <a href="search.html" class="navbar-item">
-            Recipe Search
-          </a>
-          <a href="random.html" class="navbar-item">
-            Random Recipe
-          </a>
-          <a href="about.html" class="navbar-item">
-            About Us
-          </a>
-          </a>
-        </div>
-        </div>
+     
     </nav>
   </header>
+  <section class="hero">
+    <img src="assets/images/Untitled design (11).png" class="logo-img has-text-centered" alt="">
+  </section>
   <div class="container">
-  <div class="fixed-grid has-auto-count">
-    <div class="grid">
-      <div class="cell"><a href="random.html">Random Recipe</a></div>
-      <div class="cell"><a href="feat.html">Holiday Features</a></div>
-      <div class="cell"><a href="search.html">Search by Keyword</a></div>
+    <div class="fixed-grid has-auto-count">
+      <div class="columns is-justify-content-space-evenly">
+        <div class="column is-one-quarter is-mobile is-justify-content-space-between card">
+          <h2 class="link-card is-large has-text-centered">Recipe Search</h2>
+          <img src="https://placehold.co/600x400/000000/FFFFFF/png">
+        </div>
+        <div class="column is-one-quarter is-mobile is-justify-content-space-between card">
+          <h2 class="link-card is-large has-text-centered"> This Weeks Celebrations</h2>
+          <img src="https://placehold.co/600x400/000000/FFFFFF/png">
+        </div>
+        <div class="column is-one-quarter is-mobile is-justify-content-space-between card">
+          <h2 class="link-card is-large has-text-centered">Random Recipe</h2>
+          <img src="https://placehold.co/600x400/000000/FFFFFF/png">
+        </div>
+
+      </div>
     </div>
   </div>
-  </div>
 </body>
+
 </html>
