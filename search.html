@@ -9,7 +9,6 @@
       crossorigin="anonymous"
     ></script> -->
     <!-- <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> -->
-    <script src="app.js"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
     <link rel="stylesheet" href="assets/style.css">
     <title>Recipe Search</title>
@@ -61,18 +60,34 @@
                     <div class="select">
                       <select>
                         <option>Select cuisine</option>
-                        <option>Italian</option>
+                        <option value="african">African</option>
+                        <option value="asian">Asian</option>
+                        <option value="american">American</option>
+                        <option value="british">British</option>
+                        <option value="cajun">Cajun</option>
+                        <option value="carribean">Carribean</option>
+                        <option value="chinese">Chinese</option>
+                        <option value="eastern-european">Eastern European</option>
+                        <option value="european">European</option>
+                        <option value="french">French</option>
+                        <option value="german">German</option>
+                        <option value="greek">Greek</option>
+                        <option value="indian">Indian</option>
+                        <option value="irish">Irish</option>
+                        <option value="italian">Italian</option>
+                        <option value="japanese">Japanese</option>
                         <option>Mexican</option>
                         <option>Indian</option>
                         <option>Chinese</option>
                         <option>American</option>
+                        
                       </select>
                      </div>
                   </div>
                 </div>
                 <div class="field is-grouped">
                   <div class="control">
-                    <button class="button is-link">Search</button>
+                    <button class="button is-link" id="search-button">Search</button>
                   </div>
                 </div>
             </form>
@@ -82,7 +97,7 @@
         <button class="modal-close is-large" aria-label="close"></button>
       </div>
     
-    <section>
+    <section id="recipe-display">
 
     </section>
   </main>
