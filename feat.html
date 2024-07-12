@@ -45,7 +45,7 @@
         
           <select name="q" id="country">
               <option value="">Select a country you are interested in</option>
-              <option value="US">United States</option>
+              <option value="US" selected>United States</option>
               <option value="CN">China</option>
               <option value="JP">Japan</option>
               <option value="IN">India</option>
@@ -57,9 +57,9 @@
               <option value="BS">Bahamas</option>
               <option value="CU">Cuba</option>
           </select><br>
-         <button onclick="getHolidaysForNextWeek()">Get Holidays</button>
+         <!-- <button onclick="getHolidaysForNextWeek()">Get Holidays</button> -->
         
-        <h2>Upcoming Holidays in the Next 2 Weeks</h2>
+        <h2>Upcoming U.S. Holidays in the Next 2 Weeks</h2>
         <div id="calendar"></div>
         <div id="displayEl"></div>
         <script src="./assets/holiday.js"></script>
