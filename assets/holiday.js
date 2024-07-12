@@ -1,34 +1,18 @@
 const apiKey = 'OeSQJ9j84okDmT4z3cx3jGJfpYhTKCr8';
+
 // backup apiKey lWPS2BVkfY4lGCB5QAWZ1IQ8ez41awue
+
 const country = document.getElementById("country");
 const year = 2024;
 const today = dayjs();
 
 
-$(document).ready(function() {
-    getHolidaysForNextWeek();
-  });
-
-  const cuisineMapping = {
-    'US': 'American',
-    'CN': 'Chinese',
-    'JP': 'Japanese',
-    'IN': 'Indian',
-    'KR': 'Korean',
-    'FR': 'French',
-    'GR': 'Greek',
-    'DE': 'German',
-    'MX': 'Mexican',
-    'BS': 'Bahamian',
-    'CU': 'Cuban'
-};
-
 const getHolidaysForNextWeek=function(){
-
     const displayEl = document.getElementById('displayEl');
     if (displayEl) {
         displayEl.innerHTML = "";
     }
+
 
     const existingHolidayList = document.querySelector(".holiday-list");
     if (existingHolidayList) {
@@ -47,7 +31,6 @@ const getHolidaysForNextWeek=function(){
             const holidays = data.response.holidays;
             const holidayList = document.createElement("div");
             holidayList.classList.add("holiday-list"); 
-            let holidayCount = 0;
 
             for (const holiday of holidays){
                 if (dayjs(holiday.date.iso)>today && dayjs(holiday.date.iso)<today.add(14,"day")) {
@@ -86,6 +69,7 @@ const getHolidaysForNextWeek=function(){
         }
         document.body.appendChild(holidayList);
 
+
         if (holidayCount < 5 && country.value !== 'US') {
             const messageEl = document.createElement("p");
             messageEl.textContent = "Want to celebrate it with some yummy food?";
@@ -101,10 +85,14 @@ const getHolidaysForNextWeek=function(){
             recipeContainer.appendChild(recipeButton);
             document.body.appendChild(recipeContainer);
         }
+
     }
 );
     
 }        
+
+getHolidaysForNextWeek();
+
 
 
 function getRecipe(keywords) {
@@ -147,6 +135,7 @@ function getRecipe(keywords) {
         })}
 
 
+
         function tryRecipe(cuisineKeyword) {
             const APIKey = "8a5efc5976a14aa9bcd9d4e58dfab06a";
             const url = `https://api.spoonacular.com/recipes/complexSearch?apiKey=${APIKey}&cuisine=${cuisineKeyword}`;
@@ -175,3 +164,5 @@ function getRecipe(keywords) {
                     } 
                 )
         }
+
+
