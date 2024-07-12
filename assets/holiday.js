@@ -1,15 +1,36 @@
 const apiKey = 'OeSQJ9j84okDmT4z3cx3jGJfpYhTKCr8';
+
+// backup apiKey lWPS2BVkfY4lGCB5QAWZ1IQ8ez41awue
+
 const country = document.getElementById("country");
 const year = 2024;
 const today = dayjs();
 
 
+$(document).ready(function() {
+    getHolidaysForNextWeek();
+  });
+
+  const cuisineMapping = {
+    'US': 'American',
+    'CN': 'Chinese',
+    'JP': 'Japanese',
+    'IN': 'Indian',
+    'KR': 'Korean',
+    'FR': 'French',
+    'GR': 'Greek',
+    'DE': 'German',
+    'MX': 'Mexican',
+    'BS': 'Bahamian',
+    'CU': 'Cuban'
+};
+
 const getHolidaysForNextWeek=function(){
+
     const displayEl = document.getElementById('displayEl');
     if (displayEl) {
         displayEl.innerHTML = "";
     }
-
 
     const existingHolidayList = document.querySelector(".holiday-list");
     if (existingHolidayList) {
@@ -28,6 +49,7 @@ const getHolidaysForNextWeek=function(){
             const holidays = data.response.holidays;
             const holidayList = document.createElement("div");
             holidayList.classList.add("holiday-list"); 
+            let holidayCount = 0;
 
             for (const holiday of holidays){
                 if (dayjs(holiday.date.iso)>today && dayjs(holiday.date.iso)<today.add(14,"day")) {
@@ -65,13 +87,14 @@ const getHolidaysForNextWeek=function(){
             }
         }
         document.body.appendChild(holidayList);
+
+        if (holidayCount < 5 && country.value !== 'US') {
+            tryRecipe(cuisineMapping[country.value]);
+        }
     }
 );
     
 }        
-
-getHolidaysForNextWeek();
-
 
 
 function getRecipe(keywords) {
@@ -112,3 +135,44 @@ function getRecipe(keywords) {
             recipeLink.classList = "button is-info";
             recipeLink.href = data.sourceUrl;
         })}
+
+
+        function tryRecipe(cuisineKeyword) {
+            const APIKey = "8a5efc5976a14aa9bcd9d4e58dfab06a";
+            const url = `https://api.spoonacular.com/recipes/complexSearch?apiKey=${APIKey}&cuisine=${cuisineKeyword}`;
+            
+            fetch(url)
+                .then(response => response.json())
+                .then(data => {
+                    console.log("Recipes:");
+                    console.log(data);
+                    
+                    const recipeEl = document.getElementById("recipeEl");
+                    recipeEl.innerHTML = "";
+        
+                    if (data.results.length > 0) {
+                        const recipeCard = document.createElement("div");
+                        recipeCard.classList.add("recipe-card");
+        
+                        const recipeImg = document.createElement("img");
+                        recipeImg.src = data.results[0].image;
+                        recipeCard.appendChild(recipeImg);
+        
+                        const recipeTitle = document.createElement("h3");
+                        recipeTitle.textContent = data.results[0].title;
+                        recipeCard.appendChild(recipeTitle);
+        
+                        const recipeLink = document.createElement("a");
+                        recipeLink.href = data.results[0].sourceUrl;
+                        recipeLink.textContent = "View Recipe";
+                        recipeLink.classList.add("button", "is-info");
+                        recipeCard.appendChild(recipeLink);
+        
+                        recipeEl.appendChild(recipeCard);
+                    } else {
+                        const noRecipeMsg = document.createElement("p");
+                        noRecipeMsg.textContent = "No recipes found.";
+                        recipeEl.appendChild(noRecipeMsg);
+                    }
+                })
+        }
