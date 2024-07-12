@@ -1,4 +1,5 @@
 const apiKey = 'OeSQJ9j84okDmT4z3cx3jGJfpYhTKCr8';
+// backup key: const apiKey ='lWPS2BVkfY4lGCB5QAWZ1IQ8ez41awue';
 const country = document.getElementById("country");
 const year = 2024;
 const today = dayjs();
