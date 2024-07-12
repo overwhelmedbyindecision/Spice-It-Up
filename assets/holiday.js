@@ -1,4 +1,7 @@
 const apiKey = 'OeSQJ9j84okDmT4z3cx3jGJfpYhTKCr8';
+
+// backup apiKey lWPS2BVkfY4lGCB5QAWZ1IQ8ez41awue
+
 const country = document.getElementById("country");
 const year = 2024;
 const today = dayjs();
@@ -65,6 +68,24 @@ const getHolidaysForNextWeek=function(){
             }
         }
         document.body.appendChild(holidayList);
+
+
+        if (holidayCount < 5 && country.value !== 'US') {
+            const messageEl = document.createElement("p");
+            messageEl.textContent = "Want to celebrate it with some yummy food?";
+            const recipeButton = document.createElement("button");
+            recipeButton.textContent = "Click for Recipe";
+            recipeButton.addEventListener("click", function() {
+                tryRecipe(cuisineMapping[country.value]);
+            });
+
+            const recipeContainer = document.createElement("div");
+            recipeContainer.classList.add("recipe-container");
+            recipeContainer.appendChild(messageEl);
+            recipeContainer.appendChild(recipeButton);
+            document.body.appendChild(recipeContainer);
+        }
+
     }
 );
     
@@ -112,3 +133,36 @@ function getRecipe(keywords) {
             recipeLink.classList = "button is-info";
             recipeLink.href = data.sourceUrl;
         })}
+
+
+
+        function tryRecipe(cuisineKeyword) {
+            const APIKey = "8a5efc5976a14aa9bcd9d4e58dfab06a";
+            const url = `https://api.spoonacular.com/recipes/complexSearch?apiKey=${APIKey}&cuisine=${cuisineKeyword}`;
+            
+            fetch(url)
+                .then(response => response.json())
+                .then(data => {
+                    console.log("Recipes:");
+                    console.log(data);   
+                    const recipeEl = document.getElementById("recipeEl");
+                    recipeEl.innerHTML = "";
+                    const recipeCard = document.createElement('div');
+                    const recipeImg = document.createElement('img');
+                    recipeImg.src = data.results[0].image;
+                    const recipeTitle = document.createElement('h1');
+                    recipeTitle.textContent = data.results[0].title;
+                    const idnum=data.results[0].id;
+                    const recipeLink = document.createElement('a');
+                    getLink(idnum,recipeLink);
+                    recipeLink.classList = "button is-info";
+                    recipeLink.href = data.results.sourceUrl;
+                    displayEl.appendChild(recipeCard);
+                    recipeCard.appendChild(recipeTitle);
+                    recipeCard.appendChild(recipeImg);
+                    recipeCard.appendChild(recipeLink);
+                    } 
+                )
+        }
+
+
