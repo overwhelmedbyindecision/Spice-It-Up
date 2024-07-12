@@ -1,4 +1,4 @@
-const apiKey = 'lGbpFvBDHMya0SxraF514q9D9Za18ZWq';
+const apiKey = 'OeSQJ9j84okDmT4z3cx3jGJfpYhTKCr8';
 const country = document.getElementById("country");
 const year = 2024;
 const today = dayjs();

@@ -1,5 +1,4 @@
-document.addEventListener('DOMContentLoaded', () => {
-//     // Functions to open and close a modal
+
     function openModal($el) {
       $el.classList.add('is-active');
     }
@@ -10,7 +9,6 @@ document.addEventListener('DOMContentLoaded', () => {
   
 
   
-    // Add a click event on buttons to open a specific modal
     (document.querySelectorAll('.js-modal-trigger') || []).forEach(($trigger) => {
       const modal = $trigger.dataset.target;
       const $target = document.getElementById("modal");
@@ -18,9 +16,7 @@ document.addEventListener('DOMContentLoaded', () => {
       $trigger.addEventListener('click', () => {
         openModal($target);
       });
-    });
-  
-//     // Add a click event on various child elements to close the parent modal
+   
     (document.querySelectorAll('.modal-background, .modal-close, .modal-card-head .delete, .modal-card-foot .button') || []).forEach(($close) => {
       const $target = $close.closest('.modal');
   
@@ -29,24 +25,33 @@ document.addEventListener('DOMContentLoaded', () => {
       });
     });
   
-//     // Add a keyboard event to close all modals
-//     document.addEventListener('keydown', (event) => {
-//       if(event.key === "Escape") {
-//         closeAllModals();
-//       }
-//     });
   });
 
   const searchButton = document.getElementById('search-button');
   const displayEl = document.getElementById('recipe-display');
   let searchInput = document.getElementById('searchterm');
+  let cuisineInput = document.getElementById('cuisine-term');
+  const selectedBoxes = document.querySelectorAll('input[type="checkbox"]:checked');
+  const selectedDiets = Array.from(selectedBoxes).map(checkbox => checkbox.value);
+  const dietInput = selectedDiets.join(",");
   
   //random
   function getRecipeSearch(event) {
-      event.preventDefault();
+    event.preventDefault()
       const searchTerm = document.getElementById('searchterm').ariaValueMax;
+      const cuisineSearch = cuisineInput.value;
+      const dietSearch = dietInput;
+
+      console.log(searchTerm);
+      console.log(cuisineSearch);
+      console.log(selectedDiets);
   
-      const url = `https://api.spoonacular.com/recipes/complexSearch?apiKey=ee31c44089f8402ebed393c40e52eac4&cuisine=` + searchInput.value;
+      const url = `https://api.spoonacular.com/recipes/complexSearch?apiKey=ee31c44089f8402ebed393c40e52eac4&query=` 
+      + searchInput.value; +
+       `&cuisine=` + cuisineSearch + 
+       `&diet=` + dietSearch +
+       `&number=5`
+      
       fetch(url)
           .then(function (response) {
               return response.json();
@@ -61,7 +66,7 @@ document.addEventListener('DOMContentLoaded', () => {
               const lineBreak = document.createElement('br')
               const recipeImg = document.createElement('img');
               recipeImg.src = data.recipes[0].image;
-              recipeImg.classList = "content is-large has-text-centered food-image"
+              recipeImg.classList = "content is-medium has-text-centered food-image"
               const recipeTitle = document.createElement('h1');
               recipeTitle.classList = "has-text-centered"
               recipeTitle.textContent = data.recipes[0].title;
@@ -78,7 +83,7 @@ document.addEventListener('DOMContentLoaded', () => {
               recipeCard.appendChild(recipeLink)
           })
   
-  }
+  };
   
   
   
