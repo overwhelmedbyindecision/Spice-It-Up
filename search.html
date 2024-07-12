@@ -17,7 +17,7 @@
   <header>
     <nav class="navbar" role="navigation" aria-label="main navigation" id="navbar">
         <div class="navbar-brand">
-          <img src="assets/images/SIU logo BandW.png" id="bullet-logo">
+          <img src="images/SIU logo BandW.png" id="bullet-logo">
         </div>
       <div id="navbarBasicExample" class="navbar-menu">
         <div class="navbar-end">
@@ -48,17 +48,17 @@
           <div class="box">
             <form class="box">
               <h1 class="title">Search Recipes</h1>
-                <div class="field">
+                <div class="field" id="keywords">
                 <label for="searchterm" class="label">Keywords</label>
                   <div class="control">
                     <input id="searchterm" class="input" type="text" placeholder="Search">
                   </div>
                 </div>
-                <div class="field">
+                <div class="field" id="cuisine">
                   <label class="label">Cuisine</label>
                   <div class="control">
                     <div class="select">
-                      <select>
+                      <select id="cuisine-term">
                         <option>Select cuisine</option>
                         <option value="african">African</option>
                         <option value="asian">Asian</option>
@@ -76,11 +76,67 @@
                         <option value="irish">Irish</option>
                         <option value="italian">Italian</option>
                         <option value="japanese">Japanese</option>
-                        <option>Mexican</option>
-                        <option>Indian</option>
-                        <option>Chinese</option>
-                        <option>American</option>
-                        
+                        <option value="jewish">Jewish</option>
+                        <option value="korean">Korean</option>
+                        <option value="latin american">Latin American</option>
+                        <option value="mediterranean">Mediterranean</option>
+                        <option value="mexican">Mexican</option>
+                        <option value="middle eastern">Middle Eastern</option>
+                        <option value="nordic">Nordic</option>
+                        <option value="Southern">Southern</option>
+                        <option value="Spanish">Spanish</option>
+                        <option value="Thai">Thai</option>
+                        <option value="Vietnamese">Vietnamese</option>
+                      </select>
+                     </div>
+                  </div>
+                </div>
+                <div class="field" id="diet">
+                  <label class="label">Diets</label>
+                  <label class="checkbox">
+                    <input type="checkbox" name="diet" value="gluten-free"/>
+                    Gluten Free
+                  </label>
+                  <label class="checkbox">
+                    <input type="checkbox" name="diet" value="vegetarian"/>
+                    Vegetarian
+                  </label>
+                  <label class="checkbox">
+                    <input type="checkbox" name="diet" value="lacto-vegetarian" />
+                    Lacto-Vegetarian
+                  </label>
+                  <label class="checkbox">
+                    <input type="checkbox" name="diet" value="ovo-vegetarian"/>
+                    Ovo-Vegetarian
+                  </label>
+                  <label class="checkbox">
+                    <input type="checkbox" name="diet" value="ketogenic" />
+                    Ketogenic
+                  </label>
+                  <label class="checkbox">
+                    <input type="checkbox" name="diet" value="vegan"/>
+                    Vegan
+                  </label>
+                  <label class="checkbox">
+                    <input type="checkbox" name="diet" value="pescetarian"/>
+                    Pescetarian
+                  </label>
+                  <label class="checkbox">
+                    <input type="checkbox" name="diet" value="paleo" />
+                    Paleo
+                  </label>
+                  <label class="checkbox" name="diet" value="primal">
+                    <input type="checkbox" />
+                    Primal
+                  </label>
+                  <label class="checkbox">
+                    <input type="checkbox" name="diet" value="low fodmap"/>
+                    Low FODMAP
+                  </label>
+                  <label class="checkbox">
+                    <input type="checkbox" name="diet" value="whole 30" />
+                    Whole 30
+                  </label>
                       </select>
                      </div>
                   </div>
