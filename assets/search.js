@@ -79,6 +79,8 @@
                     recipeLink.textContent = data.sourceUrl;
                     recipeLink.classList = "button is-info is-centered has-text-centered"
                     recipeLink.href = data.sourceUrl;
+                    recipeLink.target = "_blank";
+                    recipeLink.textContent = "Click Me For Recipe";
         
                     displayEl.appendChild(recipeCard);
                     recipeCard.appendChild(recipeTitle)
@@ -92,8 +94,7 @@
           }
           })
         };
-  
-  
+
+       
   
   searchButton.addEventListener('click', getRecipeSearch);
-  // searchButton.addEventListener('click', closeModal);

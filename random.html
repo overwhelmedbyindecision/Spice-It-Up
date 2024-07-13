@@ -15,12 +15,19 @@
 <body class="body-bg">
   <header>
     <nav class="navbar" role="navigation" aria-label="main navigation" id="navbar">
-        <div class="navbar-brand">
+      <div class="navbar-brand">
+        <a class="navbar-item">
           <img src="assets/images/SIU logo BandW.png" id="bullet-logo">
-        </div>
+        </a>
+        <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample" id="burger">
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+          
+      </div>
       <div id="navbarBasicExample" class="navbar-menu">
-        <div class="navbar-end">
-          <a href="index.html" class="navbar-item">
+        <div class="navbar-start">
+          <a href="home.html" class="navbar-item">
             Home
           </a>
           <a href="feat.html" class="navbar-item">
@@ -32,11 +39,10 @@
           <a href="about.html" class="navbar-item">
             About Us
           </a>
-          </a>
         </div>
-        </div>
-    </nav>
-  </header>
+        <div class="navbar-end"></div>
+      </div>
+    </header>
   <button class="button is-dark is-responsive is-fullwidth" id="search-button">Random Recipe</button>
   <section class="section columns is-centered" id="recipe-display">
     <h1>recipe loading</h1>
@@ -44,4 +50,5 @@
 
 
   <script src="assets/food.js"></script>
+  <script src="assets/nav.js"></script>
 </body>

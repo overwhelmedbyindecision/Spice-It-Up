@@ -3,12 +3,6 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- <script
-      src="https://cdn.jsdelivr.net/npm/dayjs@1.11.3/dayjs.min.js"
-      integrity="sha256-iu/zLUB+QgISXBLCW/mcDi/rnf4m4uEDO0wauy76x7U="
-      crossorigin="anonymous"
-    ></script> -->
-    <!-- <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
     <link rel="stylesheet" href="assets/style.css">
     <title>Recipe Search</title>
@@ -16,12 +10,19 @@
 <body>
   <header>
     <nav class="navbar" role="navigation" aria-label="main navigation" id="navbar">
-        <div class="navbar-brand">
-          <img src="images/SIU logo BandW.png" id="bullet-logo">
-        </div>
+      <div class="navbar-brand">
+        <a class="navbar-item">
+          <img src="assets/images/SIU logo BandW.png" id="bullet-logo">
+        </a>
+        <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample" id="burger">
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+          
+      </div>
       <div id="navbarBasicExample" class="navbar-menu">
-        <div class="navbar-end">
-          <a href="index.html" class="navbar-item">
+        <div class="navbar-start">
+          <a href="home.html" class="navbar-item">
             Home
           </a>
           <a href="feat.html" class="navbar-item">
@@ -33,11 +34,10 @@
           <a href="about.html" class="navbar-item">
             About Us
           </a>
-          </a>
         </div>
-        </div>
-    </nav>
-  </header>
+        <div class="navbar-end"></div>
+      </div>
+    </header>
     <main class="has-text-centered">
       <button class="js-modal-trigger button-is-primary" data-target="modal">
         Open Searchform
@@ -94,47 +94,47 @@
                 <div class="field" id="diet">
                   <label class="label">Diets</label>
                   <label class="checkbox">
-                    <input type="checkbox" name="diet" value="gluten-free"/>
+                    <input type="checkbox" class="box" name="diet" value="gluten-free"/>
                     Gluten Free
                   </label>
                   <label class="checkbox">
-                    <input type="checkbox" name="diet" value="vegetarian"/>
+                    <input type="checkbox" class="box" name="diet" value="vegetarian"/>
                     Vegetarian
                   </label>
                   <label class="checkbox">
-                    <input type="checkbox" name="diet" value="lacto-vegetarian" />
+                    <input type="checkbox" class="box" name="diet" value="lacto-vegetarian" />
                     Lacto-Vegetarian
                   </label>
                   <label class="checkbox">
-                    <input type="checkbox" name="diet" value="ovo-vegetarian"/>
+                    <input type="checkbox" class="box" name="diet" value="ovo-vegetarian"/>
                     Ovo-Vegetarian
                   </label>
                   <label class="checkbox">
-                    <input type="checkbox" name="diet" value="ketogenic" />
+                    <input type="checkbox" class="box" name="diet" value="ketogenic" />
                     Ketogenic
                   </label>
                   <label class="checkbox">
-                    <input type="checkbox" name="diet" value="vegan"/>
+                    <input type="checkbox" class="box" name="diet" value="vegan"/>
                     Vegan
                   </label>
                   <label class="checkbox">
-                    <input type="checkbox" name="diet" value="pescetarian"/>
+                    <input type="checkbox" class="box" name="diet" value="pescetarian"/>
                     Pescetarian
                   </label>
                   <label class="checkbox">
-                    <input type="checkbox" name="diet" value="paleo" />
+                    <input type="checkbox" class="box" name="diet" value="paleo" />
                     Paleo
                   </label>
-                  <label class="checkbox" name="diet" value="primal">
+                  <label class="checkbox" class="box" name="diet" value="primal">
                     <input type="checkbox" />
                     Primal
                   </label>
                   <label class="checkbox">
-                    <input type="checkbox" name="diet" value="low fodmap"/>
+                    <input type="checkbox" class="box" name="diet" value="low fodmap"/>
                     Low FODMAP
                   </label>
                   <label class="checkbox">
-                    <input type="checkbox" name="diet" value="whole 30" />
+                    <input type="checkbox" class="box" name="diet" value="whole 30" />
                     Whole 30
                   </label>
                       </select>
@@ -154,9 +154,10 @@
     </section>
   </main>
       <footer class="footer">
-        <h1 class="has-text-centered">Temporary Footer</h1>
+        
       </footer>
 
   <script src="assets/search.js">
+  <script src="assets/nav.js"></script>
   </script>
 </body>
