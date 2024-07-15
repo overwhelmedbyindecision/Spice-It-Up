@@ -3,13 +3,6 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script
-      src="https://cdn.jsdelivr.net/npm/dayjs@1.11.3/dayjs.min.js"
-      integrity="sha256-iu/zLUB+QgISXBLCW/mcDi/rnf4m4uEDO0wauy76x7U="
-      crossorigin="anonymous"
-    ></script>
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="app.js"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
     <link rel="stylesheet" href="assets/style.css">
     <title>About Us</title>
@@ -17,11 +10,18 @@
 <body>
   <header>
     <nav class="navbar" role="navigation" aria-label="main navigation" id="navbar">
-        <div class="navbar-brand">
+      <div class="navbar-brand">
+        <a class="navbar-item">
           <img src="assets/images/SIU logo BandW.png" id="bullet-logo">
-        </div>
+        </a>
+        <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample" id="burger">
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+          
+      </div>
       <div id="navbarBasicExample" class="navbar-menu">
-        <div class="navbar-end">
+        <div class="navbar-start">
           <a href="index.html" class="navbar-item">
             Home
           </a>
@@ -77,6 +77,6 @@
         <a class="card-footer-item" href=""></a>
       </div>  
     </section>
-
   </main>
+ <script src="assets/nav.js"></script>
 </body>

@@ -17,7 +17,7 @@
         openModal($target);
       });
    
-    (document.querySelectorAll('.modal-background, .modal-close, .modal-card-head .delete, .modal-card-foot .button') || []).forEach(($close) => {
+    (document.querySelectorAll('search-button, .modal-background, .modal-close, .modal-card-head .delete, .modal-card-foot .button') || []).forEach(($close) => {
       const $target = $close.closest('.modal');
   
       $close.addEventListener('click', () => {
@@ -49,42 +49,52 @@
       const url = `https://api.spoonacular.com/recipes/complexSearch?apiKey=ee31c44089f8402ebed393c40e52eac4&query=` 
       + searchInput.value; +
        `&cuisine=` + cuisineSearch + 
-       `&diet=` + dietSearch +
-       `&number=5`
+       `&diet=` + dietSearch
       
       fetch(url)
           .then(function (response) {
               return response.json();
           }).then(function (data) {
               console.log(data);
-              console.log(data.recipes[0].sourceUrl)
+
+              for (let i = 0; i < data.results.length; i++) {
+                setTimeout(() => {
+                const recipeId =  data.results[i].id
+                const recipeUrl = "https://api.spoonacular.com/recipes/" + recipeId + "/information?apiKey=0e012fe981584e42aa26cd40242a5244&includeNutrition=false"
+                fetch(recipeUrl)
+                .then(function (response) {
+                    return response.json();
+                  }).then(function (data) {
   
-              displayEl.innerHTML = "";
-  
-              const recipeCard = document.createElement('div');
-              recipeCard.classList = "box card"
-              const lineBreak = document.createElement('br')
-              const recipeImg = document.createElement('img');
-              recipeImg.src = data.recipes[0].image;
-              recipeImg.classList = "content is-medium has-text-centered food-image"
-              const recipeTitle = document.createElement('h1');
-              recipeTitle.classList = "has-text-centered"
-              recipeTitle.textContent = data.recipes[0].title;
-              const recipeLink = document.createElement('a');
-              recipeLink.textContent = data.recipes[0].sourceUrl;
-              recipeLink.classList = "button is-info is-centered has-text-centered"
-              recipeLink.href = data.recipes[0].sourceUrl;
-  
-              displayEl.appendChild(recipeCard);
-              recipeCard.appendChild(recipeTitle)
-              recipeCard.appendChild(lineBreak)
-              recipeCard.appendChild(recipeImg)
-              recipeCard.appendChild(lineBreak)
-              recipeCard.appendChild(recipeLink)
+                    const recipeCard = document.createElement('div');
+                    recipeCard.classList = "box card"
+                    const lineBreak = document.createElement('br')
+                    const recipeImg = document.createElement('img');
+                    recipeImg.src = data.image;
+                    recipeImg.classList = "content is-medium has-text-centered food-image"
+                    const recipeTitle = document.createElement('h1');
+                    recipeTitle.classList = "has-text-centered"
+                    recipeTitle.textContent = data.title;
+                    const recipeLink = document.createElement('a');
+                    recipeLink.textContent = data.sourceUrl;
+                    recipeLink.classList = "button is-info is-centered has-text-centered"
+                    recipeLink.href = data.sourceUrl;
+                    recipeLink.target = "_blank";
+                    recipeLink.textContent = "Click Me For Recipe";
+        
+                    displayEl.appendChild(recipeCard);
+                    recipeCard.appendChild(recipeTitle)
+                    recipeCard.appendChild(lineBreak)
+                    recipeCard.appendChild(recipeImg)
+                    recipeCard.appendChild(lineBreak)
+                    recipeCard.appendChild(recipeLink)
+                  
+              });
+            }, i * 1200)
+          }
           })
-  
-  };
-  
-  
+        };
+
+       
   
   searchButton.addEventListener('click', getRecipeSearch);

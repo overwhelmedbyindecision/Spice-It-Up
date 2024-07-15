@@ -15,34 +15,33 @@
   <header>
     <nav class="navbar" role="navigation" aria-label="main navigation" id="navbar">
       <div class="navbar-brand">
-        <img src="images/SIU logo BandW.png" id="bullet-logo">
-        <a href="feat.html" class="navbar-item">
-          Featured Recipes
+        <a class="navbar-item">
+          <img src="assets/images/SIU logo BandW.png" id="bullet-logo">
         </a>
-        <a href="search.html" class="navbar-item">
-          Recipe Search
-        </a>
-        <a href="random.html" class="navbar-item">
-          Random Recipe
-        </a>
-        <a href="about.html" class="navbar-item">
-          About Us
-        </a>
-        <!-- <a class="navbar-burger" role="button" aria-label="menu" aria-expanded="false">
-          <span aria-hidden="true">Featured Recipes</span>
+        <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample" id="burger">
           <span aria-hidden="true"></span>
           <span aria-hidden="true"></span>
           <span aria-hidden="true"></span>
-        </a> -->
+          
       </div>
-      <div id="navbarBasicExample" class="navbar-menu is-active">
-      <div class="navbar-start"></div>
-    
-          <div class="navbar-end"></div>
+      <div id="navbarBasicExample" class="navbar-menu">
+        <div class="navbar-start">
+          <a href="feat.html" class="navbar-item">
+            Featured Recipes
+          </a>
+          <a href="search.html" class="navbar-item">
+            Recipe Search
+          </a>
+          <a href="random.html" class="navbar-item">
+            Random Recipe
+          </a>
+          <a href="about.html" class="navbar-item">
+            About Us
+          </a>
         </div>
-     
-    </nav>
-  </header>
+        <div class="navbar-end"></div>
+      </div>
+    </header>
   <section class="hero">
     <img src="assets/images/Untitled design (11).png" class="logo-img has-text-centered" alt="">
   </section>
@@ -65,9 +64,13 @@
     </div>
   </div>
   <footer id="footer">
-
+    <br>
+    <br>
+    <br>
   </footer>
+  
   <script src="assets/home.js"></script>
+  <script src="assets/nav.js"></script>
 </body>
 
 </html>

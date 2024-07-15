@@ -1,6 +1,6 @@
 
 #bullet-logo {
-    height: 5vw;
+     height: 10vh;
 }
 
 .food-image {
@@ -11,7 +11,7 @@
 
 #navbar {
     background-color: maroon;
-    margin-bottom: 3vw maroon;
+    max-height: 20vh;
 }
 
 #search-button {
@@ -39,5 +39,17 @@
 
 .link-card {
     font-weight: bolder;
+}
+
+.navbar-burger{
+    color: wheat;
+    height: 0%;
+    margin-top: 10vh;
+}
+
+#navbarBasicExample{
+    margin: auto;
+    padding: 0%;
+    background-color: maroon;
 }
 
