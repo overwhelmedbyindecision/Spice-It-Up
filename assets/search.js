@@ -2,9 +2,9 @@
     function openModal($el) {
       $el.classList.add('is-active');
     }
-  
+    const modalForm = document.getElementById('modal');
     function closeModal($el) {
-      $el.classList.remove('is-active');
+      modalForm.classList.remove('is-active');
     }
   
 
@@ -48,7 +48,7 @@
       console.log(cuisineSearch);
       console.log(selectedDiets);
   
-      const url = `https://api.spoonacular.com/recipes/complexSearch?apiKey=ee31c44089f8402ebed393c40e52eac4&query=` 
+      const url = `https://api.spoonacular.com/recipes/complexSearch?apiKey=ed127a9fae5c4c2c8e487fa04c31a5f1&query=` 
       + searchInput.value; +
        `&cuisine=` + cuisineSearch + 
        `&diet=` + dietSearch
@@ -62,7 +62,7 @@
               for (let i = 0; i < data.results.length; i++) {
                 setTimeout(() => {
                 const recipeId =  data.results[i].id
-                const recipeUrl = "https://api.spoonacular.com/recipes/" + recipeId + "/information?apiKey=0e012fe981584e42aa26cd40242a5244&includeNutrition=false"
+                const recipeUrl = "https://api.spoonacular.com/recipes/" + recipeId + "/information?apiKey=ee31c44089f8402ebed393c40e52eac4&includeNutrition=false"
                 fetch(recipeUrl)
                 .then(function (response) {
                     return response.json();
@@ -113,5 +113,6 @@
        
   searchButton.addEventListener('click', save);
   searchButton.addEventListener('click', getRecipeSearch);
+  searchButton.addEventListener('click', closeModal);
   modalButton.addEventListener('click', load);
 

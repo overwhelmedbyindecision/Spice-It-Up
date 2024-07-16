@@ -2,7 +2,7 @@ const footerEl = document.getElementById('footer')
 
 function getTrivia(event) {
 
-    const url = "https://api.spoonacular.com/food/trivia/random?apiKey=0e012fe981584e42aa26cd40242a5244&"
+    const url = "https://api.spoonacular.com/food/trivia/random?apiKey=ed127a9fae5c4c2c8e487fa04c31a5f1&"
     fetch(url)
         .then(function (response) {
             return response.json();

@@ -97,3 +97,9 @@ body {
     margin-top: 0%;
     padding: 1vw;
 }
+
+.prof-pic{
+    border-radius: 50%;
+    max-height: 18ch;
+    margin: auto;
+}

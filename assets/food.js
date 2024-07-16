@@ -5,7 +5,7 @@ const displayEl = document.getElementById('recipe-display');
 function getRecipe(event) {
     //event.preventDefault();
 
-    const url = "https://api.spoonacular.com/recipes/random?apiKey=0e012fe981584e42aa26cd40242a5244&number=1"
+    const url = "https://api.spoonacular.com/recipes/random?apiKey=ed127a9fae5c4c2c8e487fa04c31a5f1&number=1"
     fetch(url)
         .then(function (response) {
             return response.json();

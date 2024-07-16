@@ -41,7 +41,7 @@ const getHolidaysForNextWeek = function() {
         for (const holiday of holidays) {
             if (dayjs(holiday.date.iso) > today && dayjs(holiday.date.iso) < today.add(14, "day")) {
                 const holidayCard = document.createElement("div");
-                holidayCard.classList.add("holiday-card");
+                holidayCard.classList.add("holiday-card","container");
                 const cardHeader = document.createElement("h3");
                 const cardDate = dayjs(holiday.date.iso).format("MMM-DD");
                 cardHeader.textContent = cardDate;
@@ -93,7 +93,7 @@ const getHolidaysForNextWeek = function() {
 
 function getRecipe(keywords) {
     const APIKey2 = "8a5efc5976a14aa9bcd9d4e58dfab06a";
-    const url = `https://api.spoonacular.com/recipes/complexSearch?apiKey=0e012fe981584e42aa26cd40242a5244&cuisine=${keywords}`;
+    const url = `https://api.spoonacular.com/recipes/complexSearch?apiKey=ed127a9fae5c4c2c8e487fa04c31a5f1&cuisine=${keywords}`;
     
     fetch(url)
         .then(function(response) {
