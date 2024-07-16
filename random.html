@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdn.jsdelivr.net/npm/dayjs@1.11.3/dayjs.min.js"
+    integrity="sha256-iu/zLUB+QgISXBLCW/mcDi/rnf4m4uEDO0wauy76x7U=" crossorigin="anonymous"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Della+Respira&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
+  <link rel="stylesheet" href="assets/style.css">
+  <title>Random Recipe</title>
+</head>
+
+<body class="body-bg">
+  <header>
+    <nav class="navbar" role="navigation" aria-label="main navigation" id="navbar">
+      <div class="navbar-brand">
+        <a class="navbar-item">
+          <img src="assets/images/SIU logo BandW.png" id="bullet-logo" onclick="window.location.href='index.html'">
+        </a>
+        <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample" id="burger">
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+          
+      </div>
+      <div id="navbarBasicExample" class="navbar-menu">
+        <div class="navbar-start">
+          <a href="home.html" class="navbar-item">
+            Home
+          </a>
+          <a href="feat.html" class="navbar-item">
+            Featured Recipes
+          </a>
+          <a href="search.html" class="navbar-item">
+            Recipe Search
+          </a>
+          <a href="about.html" class="navbar-item">
+            About Us
+          </a>
+        </div>
+        <div class="navbar-end"></div>
+      </div>
+    </header>
+    <div class="has-text-centered">
+  <button class="button is-dark is-responsive has-text-centered" id="search-button">Random Recipe</button>
+</div>
+  <section class="section columns is-centered" id="recipe-display">
+    <h1>recipe loading</h1>
+  </section>
+
+
+  <script src="assets/food.js"></script>
+  <script src="assets/nav.js"></script>
+</body>

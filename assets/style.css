@@ -1,0 +1,99 @@
+* {
+    font-family: "Della Respira", serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+  
+
+body {
+    background-image: url(images/SIU\ background.png);
+    background-size: cover;
+    min-height: 100vh;
+    height: 100%;
+}
+
+#bullet-logo {
+    height: 10vh;
+}
+
+.food-image {
+    border-radius: 25px;
+    border-style: solid;
+    border: 10px #85371C;
+}
+
+#navbar {
+    background-color: #85371C;
+    max-height: 20vh;
+}
+
+#search-button {
+    margin: maroon;
+}
+
+.navbar-item {
+    font-weight: bolder;
+    color: wheat;
+}
+
+.card {
+    background-color: wheat;
+    border-color: #85371C;
+    border-width: 20px;
+}
+
+.logo-img {
+    height: 25vw;
+    width: max-content;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 3vh;
+    margin-bottom: 5vh;
+    background-color: wheat;
+    border-radius: 50%;
+}
+
+.link-card {
+    font-weight: bolder;
+}
+
+.navbar-burger {
+    color: wheat;
+    height: 0%;
+    margin-top: 1.5rem;
+}
+
+#navbarBasicExample {
+    margin: auto;
+    padding: 0%;
+    background-color: #85371C;
+}
+
+.feat-hero {
+    color: wheat;
+    text-shadow: 1px 2px black;
+}
+
+.cal-rem {
+    color: wheat;
+    text-shadow: 1px 2px black;
+}
+
+.page-btn {
+    background-color: wheat;
+
+}
+.about{
+    color: wheat;
+    background-color: #85371C;
+    border-radius: 5px 5px 0px 0px; 
+ 
+}
+.about-p{
+    color: black;
+    background-color: wheat; 
+    border-radius: 0px 0px 5px 5px; 
+    margin-top: 0%;
+    padding: 1vw;
+}

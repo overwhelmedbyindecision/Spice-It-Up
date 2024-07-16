@@ -1,11 +1,80 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Traditional Tables</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdn.jsdelivr.net/npm/dayjs@1.11.3/dayjs.min.js"
+    integrity="sha256-iu/zLUB+QgISXBLCW/mcDi/rnf4m4uEDO0wauy76x7U=" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Della+Respira&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/style.css">
+
+  <title>Home</title>
 </head>
+
 <body>
-    <h1>Coming Soon</h1>
+  <header>
+    <nav class="navbar" role="navigation" aria-label="main navigation" id="navbar">
+      <div class="navbar-brand">
+        <a class="navbar-item">
+          <img src="assets/images/SIU logo BandW.png" id="bullet-logo" onclick="window.location.href='index.html'">
+        </a>
+        <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample" id="burger">
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+          
+      </div>
+      <div id="navbarBasicExample" class="navbar-menu">
+        <div class="navbar-start">
+          <a href="feat.html" class="navbar-item">
+            Featured Recipes
+          </a>
+          <a href="search.html" class="navbar-item">
+            Recipe Search
+          </a>
+          <a href="random.html" class="navbar-item">
+            Random Recipe
+          </a>
+          <a href="about.html" class="navbar-item">
+            About Us
+          </a>
+        </div>
+        <div class="navbar-end"></div>
+      </div>
+    </header>
+  <section class="hero">
+   
+    <img src="assets/images/SIU logo full.png" class="logo-img has-text-centered" alt="">
+
+  </section>
+  <div class="container">
+    <div class="fixed-grid has-auto-count">
+      <div class="columns is-justify-content-space-evenly">
+        <div class="column is-one-quarter is-mobile is-justify-content-space-between card">
+          <h2 class="link-card is-large has-text-centered">Recipe Search</h2>
+          <img src="assets/images/Search Img.png" onclick="window.location.href='search.html'" style="cursor:pointer">
+        </div>
+        <div class="column is-one-quarter is-mobile is-justify-content-space-between card">
+          <h2 class="link-card is-large has-text-centered"> This Weeks Celebrations</h2>
+          <img src="assets/images/calendar img.png" onclick="window.location.href='feat.html'" style="cursor:pointer">
+        </div>
+        <div class="column is-one-quarter is-mobile is-justify-content-space-between card">
+          <h2 class="link-card is-large has-text-centered">Random Recipe</h2>
+          <img src="assets/images/rand-img.jpg" onclick="window.location.href='random.html'" style="cursor:pointer">
+        </div>
+      </div>
+    </div>
+  </div>
+  <footer id="footer">
+    <br>
+    <br>
+  </footer>
+  <script src="assets/home.js"></script>
+  <script src="assets/nav.js"></script>
 </body>
+
 </html>

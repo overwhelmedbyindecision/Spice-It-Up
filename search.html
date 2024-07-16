@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Della+Respira&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/style.css">
+    <title>Recipe Search</title>
+</head>
+<body>
+  <header>
+    <nav class="navbar" role="navigation" aria-label="main navigation" id="navbar">
+      <div class="navbar-brand">
+        <a class="navbar-item">
+          <img src="assets/images/SIU logo BandW.png" id="bullet-logo" onclick="window.location.href='index.html'">
+        </a>
+        <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample" id="burger">
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+          
+      </div>
+      <div id="navbarBasicExample" class="navbar-menu">
+        <div class="navbar-start">
+          <a href="home.html" class="navbar-item">
+            Home
+          </a>
+          <a href="feat.html" class="navbar-item">
+            Featured Recipes
+          </a>
+          <a href="random.html" class="navbar-item">
+            Random Recipe
+          </a>
+          <a href="about.html" class="navbar-item">
+            About Us
+          </a>
+        </div>
+        <div class="navbar-end"></div>
+      </div>
+    </header>
+    <main class="has-text-centered">
+      <section class="hero">
+        <img src="assets/images/SIU logo full.png" class="logo-img has-text-centered" alt="">
+      </section>
+      <button class="js-modal-trigger button mt-5 page-btn" data-target="modal" id="modal-open">
+        Open Searchform
+      </button>
+      <div id="modal" class="modal" >
+        <div class="modal-background"></div>
+        <div class="modal-content">
+          <div class="box">
+            <form class="box">
+              <h1 class="title">Search Recipes</h1>
+                <div class="field" id="keywords">
+                <label for="searchterm" class="label">Keywords</label>
+                  <div class="control">
+                    <input id="searchterm" class="input" type="text" placeholder="Search">
+                  </div>
+                </div>
+                <div class="field" id="cuisine">
+                  <label class="label">Cuisine</label>
+                  <div class="control">
+                    <div class="select">
+                      <select id="cuisine-term">
+                        <option>Select cuisine</option>
+                        <option value="african">African</option>
+                        <option value="asian">Asian</option>
+                        <option value="american">American</option>
+                        <option value="british">British</option>
+                        <option value="cajun">Cajun</option>
+                        <option value="carribean">Carribean</option>
+                        <option value="chinese">Chinese</option>
+                        <option value="eastern-european">Eastern European</option>
+                        <option value="european">European</option>
+                        <option value="french">French</option>
+                        <option value="german">German</option>
+                        <option value="greek">Greek</option>
+                        <option value="indian">Indian</option>
+                        <option value="irish">Irish</option>
+                        <option value="italian">Italian</option>
+                        <option value="japanese">Japanese</option>
+                        <option value="jewish">Jewish</option>
+                        <option value="korean">Korean</option>
+                        <option value="latin american">Latin American</option>
+                        <option value="mediterranean">Mediterranean</option>
+                        <option value="mexican">Mexican</option>
+                        <option value="middle eastern">Middle Eastern</option>
+                        <option value="nordic">Nordic</option>
+                        <option value="Southern">Southern</option>
+                        <option value="Spanish">Spanish</option>
+                        <option value="Thai">Thai</option>
+                        <option value="Vietnamese">Vietnamese</option>
+                      </select>
+                     </div>
+                  </div>
+                </div>
+                <div class="field" id="diet">
+                  <label class="label">Diets</label>
+                  <label class="checkbox">
+                    <input type="checkbox" class="box" name="diet" value="gluten-free" id="checkbox-0"/>
+                    Gluten Free
+                  </label>
+                  <label class="checkbox">
+                    <input type="checkbox" class="box" name="diet" value="vegetarian" id="checkbox-1"/>
+                    Vegetarian
+                  </label>
+                  <label class="checkbox">
+                    <input type="checkbox" class="box" name="diet" value="lacto-vegetarian" id="checkbox-2"/>
+                    Lacto-Vegetarian
+                  </label>
+                  <label class="checkbox">
+                    <input type="checkbox" class="box" name="diet" value="ovo-vegetarian" id="checkbox-3"/>
+                    Ovo-Vegetarian
+                  </label>
+                  <label class="checkbox">
+                    <input type="checkbox" class="box" name="diet" value="ketogenic" id="checkbox-4"/>
+                    Ketogenic
+                  </label>
+                  <label class="checkbox">
+                    <input type="checkbox" class="box" name="diet" value="vegan" id="checkbox-5"/>
+                    Vegan
+                  </label>
+                  <label class="checkbox">
+                    <input type="checkbox" class="box" name="diet" value="pescetarian" id="checkbox-6"/>
+                    Pescetarian
+                  </label>
+                  <label class="checkbox">
+                    <input type="checkbox" class="box" name="diet" value="paleo" id="checkbox-7"/>
+                    Paleo
+                  </label>
+                  <label class="checkbox" >
+                    <input type="checkbox" class="box" name="diet" value="primal" id="checkbox-8"/>
+                    Primal
+                  </label>
+                  <label class="checkbox">
+                    <input type="checkbox" class="box" name="diet" value="low fodmap" id="checkbox-9"/>
+                    Low FODMAP
+                  </label>
+                  <label class="checkbox">
+                    <input type="checkbox" class="box" name="diet" value="whole 30" id="checkbox-10"/>
+                    Whole 30
+                  </label>
+                      </select>
+                     </div>
+                  </div>
+                </div>
+                <div class="field is-grouped">
+                  <div class="control">
+                    <button class="button is-link" id="search-button">Search</button>
+                  </div>
+                </div>
+            </form>
+          </div>
+        </div>
+      </div>  
+    <section class="columns is-multiline" id="recipe-display">
+    </section>
+  </main>
+  <script src="assets/search.js"></script>
+  <script src="assets/nav.js"></script>
+</body>
