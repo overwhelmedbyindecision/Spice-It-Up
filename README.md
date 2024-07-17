@@ -31,15 +31,25 @@ This project is deployed using gitHub pages at https://overwhelmedbyindecision.g
 
 
 This is a screenshot of the home page:
+![homescreenshot](assets/images/readmescreenshots/homescreenshot.png)
 
 This is a screenshot of the random recipe page with a random result:
+![randomrecipescreenshot](assets/images/readmescreenshots/randomrecipescreenshot.png)
 
 This is a screenshot of the holiday feature page calendar:
+![holidaycreenshot](assets/images/readmescreenshots/holidaycalscreenshot.png)
 
 This is a screenshot of the holiday feature page with a spice it up result:
+![holidayscreenshot](assets/images/readmescreenshots/featuredrecipescreenshot.png)
 
 This is a screenshot of the search page form:
+![searchscreenshot](assets/images/readmescreenshots/Searchscreenshot.png)
 
 This is a screenshot of the search page with results:
+![searchresultsscreenshot](assets/images/readmescreenshots/searchresultsscreenshot.png)
+These are screenshots of the about us page:
 
+![aboutusscreenshot](assets/images/readmescreenshots/aboutustopscreenshot.png)
+
+![aboutusdevelopersscreenshot](assets/images/readmescreenshots/aboutusscreenshot.png)
 
